@@ -9,7 +9,8 @@ load_dotenv()
 
 # Initialize the Discord bot
 intents = discord.Intents.default()
-intents.messages = True
+intents.members = True
+intents.presences = True
 intents.message_content = True
 
 client = discord.Client(intents=intents)
