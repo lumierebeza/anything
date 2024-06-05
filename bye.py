@@ -44,15 +44,15 @@ async def on_message(message):
     # Check if the message is in the "random" channel
     if channel == "random": 
         # Respond to greetings
-        if user_message.lower() == "Bangtan?":
+        if user_message.lower() == "bangtan?":
             await message.channel.send(f'ARMY! {username} Your EC2 Data: {ec2_metadata.region}') 
             return
         # other string options
-        elif user_message.lower() == "Hello": 
+        elif user_message.lower() == "hello": 
             await message.channel.send(f'Hello {username}') 
 
         # Returning instance data for the last conditional statement.
-        elif user_message.lower() == "EC2 Data": 
+        elif user_message.lower() == "ec2 data": 
             await message.channel.send("Your instance data is " + ec2_metadata) 
 
 # Run the bot with the token
