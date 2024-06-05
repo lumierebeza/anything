@@ -5,21 +5,21 @@ from dotenv import load_dotenv
 from ec2_metadata import ec2_metadata
 
 
-
-
 load_dotenv() 
+
 # Initialize the Discord bot
 intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
 
 client = discord.Client(intents=intents)
-print('This is my Ec2_metadata.region:', ec2_metadata.region)
-print('This is my Ec2_metadata.instance.id:', ec2_metadata.instance_id)
-
 
 # Get the token from the environment variables
 token = str(os.getenv('TOKEN'))
+
+print('This is my Ec2_metadata.region:', ec2_metadata.region)
+print('This is my Ec2_metadata.instance.id:', ec2_metadata.instance_id)
+
 
 @client.event 
 async def on_ready(): 
