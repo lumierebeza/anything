@@ -17,8 +17,7 @@ client = discord.Client(intents=intents)
 print('This is my Ec2_metadata.region:', ec2_metadata.region)
 print('This is my Ec2_metadata.instance.id:', ec2_metadata.instance_id)
 
-# Initialize the Discord bot
-client = discord.Bot() 
+
 # Get the token from the environment variables
 token = str(os.getenv('TOKEN'))
 
